@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SillySong" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silly Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciW-xd-4mi">
+                                <rect key="frame" x="59" y="28" width="257" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="jVe-Xb-sqy"/>
+                                    <constraint firstAttribute="width" constant="257" id="ruO-1S-D39"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="46"/>
+                                <color key="textColor" red="1" green="0.95363220920064518" blue="0.95736682965532549" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Your silly lyrics will show here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="u8k-bl-cU7">
+                                <rect key="frame" x="45" y="274" width="284" height="243"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="CxW-4M-taU"/>
+                                    <constraint firstAttribute="height" constant="243" id="RUs-0g-uZn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDA-k3-D8j">
+                                <rect key="frame" x="103" y="192" width="169" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6KA-7A-gQj"/>
+                                    <constraint firstAttribute="width" constant="169" id="nWE-QF-Gpu"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="displayLyrics:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="igg-E4-Zsb"/>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="2eu-3I-QlN"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.412977531778428" green="0.89236753862478546" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="u8k-bl-cU7" firstAttribute="centerX" secondItem="qDA-k3-D8j" secondAttribute="centerX" id="Ck0-eA-Vnw"/>
+                            <constraint firstItem="ciW-xd-4mi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="DjC-C6-BPA"/>
+                            <constraint firstItem="qDA-k3-D8j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="87" id="J3y-17-fAi"/>
+                            <constraint firstItem="ciW-xd-4mi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lu7-AD-Pfv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qDA-k3-D8j" secondAttribute="trailing" constant="87" id="SNg-3y-9YU"/>
+                            <constraint firstItem="qDA-k3-D8j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sbq-rF-0Kb"/>
+                            <constraint firstItem="u8k-bl-cU7" firstAttribute="top" secondItem="qDA-k3-D8j" secondAttribute="bottom" constant="52" id="amD-nf-vG2"/>
+                            <constraint firstItem="qDA-k3-D8j" firstAttribute="top" secondItem="ciW-xd-4mi" secondAttribute="bottom" constant="50" id="f44-JD-IXg"/>
+                            <constraint firstItem="qDA-k3-D8j" firstAttribute="centerY" secondItem="u8k-bl-cU7" secondAttribute="centerY" constant="-188.5" id="lJs-yh-Sz2"/>
+                            <constraint firstItem="ciW-xd-4mi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ung-sM-sWT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lyricsView" destination="u8k-bl-cU7" id="GI1-dL-h49"/>
+                        <outlet property="nameField" destination="qDA-k3-D8j" id="FcE-Eo-ZKF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
